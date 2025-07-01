@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7fdfd;
+      color: #1c1c1c;
+    }
+
+    header {
+      background-color: #0a6ea9; /* medical blue */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .auth-buttons {
+      margin-left: auto;
+    }
+
+    .auth-buttons button {
+      background-color: #ffffff;
+      color: #0a6ea9;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0a6ea9;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      .auth-buttons {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Oi</h1>
-  <p>Welcome to my website.</p>
+
+  <header>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Doctors</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="auth-buttons">
+      <button>Login</button>
+      <button>Sign Up</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="https://via.placeholder.com/600x300?text=Medical+Hero+Image" alt="Medical Hero Image">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+      Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+    </p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+  </script>
+  
 </body>
 </html>
