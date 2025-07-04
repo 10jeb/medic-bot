@@ -52,7 +52,7 @@ function App() {
           className="mb-6 rounded shadow-md max-w-full h-auto"
         />
         <p className="max-w-xl text-lg text-gray-700">
-          Welcome to MedicBot — your trusted AI health companion. Get fast, reliable answers to your medical questions, 24/7.
+          Welcome to MedicBott — your trusted AI health companion. Get fast, reliable answers to your medical questions, 24/7.
         </p>
       </section>
     </div>
